@@ -92,7 +92,6 @@ University of Pennsylvania
 - The problem: **too much** data
 
     - the "p > n problem"  
-      (columns > rows problem)  
 
 - Reducing dimensions:  
 
@@ -113,8 +112,16 @@ University of Pennsylvania
     - supervised vs unsupervised learning  
 
     - Dirichlet multinomial mixture modeling
-  
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+
+knitr::include_graphics(path = "img/pptx_img/image25.png")
+
+```
+
+
 ]  
+
 
 
 
@@ -231,9 +238,21 @@ sample(x = seq(0,1000,1), size = 1e4, replace = TRUE, prob = c(0.8, rep(0.2 / 10
 
 - OTUs are really *columns* (i.e., variables) & specimens *rows* (i.e., observations)  
 
-- 10 rows & 1000 columns → p >> n   
+- 10 rows & 1000 columns → p >> n → overfitting risk   
 
 ]
+
+
+---
+class: top left hide-count
+background-image: url(img/michael-48yI_ZyzuLo-unsplash.jpg)
+background-size: cover
+
+## <span style='color: black;'>Reducing Dimensions</span>
+
+
+.footnote-right[<span style='color: white'>photo: Michael @unsplash</span>]  
+
 
 ---
 
@@ -258,6 +277,115 @@ sample(x = seq(0,1000,1), size = 1e4, replace = TRUE, prob = c(0.8, rep(0.2 / 10
     - community types (mixture modeling)  
 
 ]
+
+---
+class: top left
+background-image: url(img/pptx_img/image4.png)
+background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image3.png)
+background-size: contain
+
+
+---
+
+## Descriptive: Heatmaps & Barplots  
+
+.pad-left[
+
+- Visualization of OTU table:  
+
+    - typically present counts as a proportion of sample total  
+
+    - choice of sample order can highlight group differences  
+
+- Limitations:  
+
+    - cannot depict full list of OTUs  
+
+    - space dictates taxonomic level presented  
+
+]
+
+---
+
+## Single-Taxon hypotheses
+
+.pad-left[
+
+- You suspect Bacteroides has a relationship with outcome of interest...  
+
+    - Bacteroides (genus)?  
+
+    - Bacteroidaceae (family)?  
+
+    - Bacteroidales (order)?  
+
+    - Bacteroidetes (class)?
+
+    - functional group (e.g., butyrate production)?  
+
+- Hypotheses focusing on specific taxa often fail to account for **possibility of selection bias from culture**.  
+
+
+]
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+
+set.seed(16)
+
+read_csv("tabs/demo_taxonomic_assignment_for_CCEB_ID_epi_lecture_20240616.csv") |> 
+   select(-assignment) |> 
+   gt::gt() |> 
+   gt::as_raw_html()
+
+
+```
+
+
+---
+
+## Dimension Reduction: Alpha Diversity  
+
+.pad-left[
+
+- Summarize each sample’s community in a single measure:  
+
+    - richness: number of community members  
+
+    - evenness: the distribution of member counts  
+
+- Many alpha diversity metrics (weight richness/evenness):  
+
+    - species number, Chao1 (singletons & doubletons)  
+
+    - Shannon diversity: $H' = - \sum_{i} p_{i} \cdot \log(p_{i})$
+
+     (note: may measure similarity or dissimilarity)  
+
+
+]
+
+---
+class: top left
+background-image: url(img/pptx_img/image2.png)
+background-size: contain
+
+
+
+---
+
+
+---
+
+
+
+---
 
 
 ---
