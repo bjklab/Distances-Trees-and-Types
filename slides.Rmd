@@ -1,0 +1,237 @@
+---
+title: "Distances, Trees & Types: Methods for Analyzing High-Dimensional Microbiome Data"
+subtitle: "<hr>"
+author: "Brendan J. Kelly, MD, MS"
+institute: "Infectious Diseases, Epidemiology, & Microbiology" 
+date: "17 June 2024" #"`r format(Sys.Date(), '%d %B %Y')`"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer-inferno-grids-fade.css
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    seal: false
+    nature:
+      ratio: 16:9
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: "%current%"
+
+---
+exclude: true
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+options(htmltools.dir.version = FALSE)
+xaringan::summon_remark()
+library(tidyverse)
+library(gt)
+
+```
+
+```{r xaringan-tile-view, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
+xaringanExtra::use_tile_view()
+xaringanExtra::use_webcam()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_animate_css()
+xaringanExtra::use_share_again()
+#xaringanExtra::use_scribble(pen_color = "#56106E")
+```
+
+---
+class: top left hide-count
+background-image: url(img/adrian-lange-Wk902ZLaA7M-unsplash_crop.jpg)
+background-size: cover
+
+.move-top5[
+.title-text[<span style='font-size:0.9em'>Distances, Trees & Types</span>]  
+.title-subtext[<span style='font-size:0.95em'>Methods for Analyzing High-Dimensional Microbiome Data</span>]
+]  
+  
+.callout-url-rightcorner[
+.title-nametext[
+Brendan J. Kelly, MD, MS  
+Infectious Diseases | Epidemiology | Microbiology  
+University of Pennsylvania  
+17 June 2024  <!-- `r format(Sys.Date(), '%d %B %Y')` -->   
+]
+]
+
+.footnote-left[<span style='color:#ffffff'>photo: Adrian Lange @unsplash</span>]  
+
+
+
+---
+
+## Disclosures  
+
+.pad-left[  
+
+- No conflicts of interest.  
+
+- Research supported by:
+
+    - NIAID K23 AI121485  
+    - CDC BAA 200-2016-91964  
+    - CDC BAA 200-2016-91937  
+    - CDC BAA 200-2018-02919  
+    - CDC BAA 200-2021-10986   
+    - CDC Prevention Epicenters U54CK000610  
+    - NIAID U19AI174998  
+
+]
+
+---
+
+## Outline: The Microbiome for Epidemiologists   
+  
+.pull-left[  
+  
+- The problem: too much data.  
+
+- Reducing dimensions:  
+
+    - richness, evenness, and diversity  
+
+    - ecological distances (UniFrac)  
+
+    - PCA & PCoA  
+
+    - PERMANOVA (adonis)  
+
+]
+
+.pull-right[
+
+- Cluster analysis:  
+
+    - supervised vs unsupervised learning  
+
+    - Dirichlet multinomial mixture modeling
+  
+]  
+
+
+
+---
+class: top left hide-count
+background-image: url(img/diana-polekhina-z84ULL2EoKs-unsplash.jpg)
+background-size: cover
+
+## <span style='color: #093b85;'>Too Much Data</span>
+
+
+.footnote-left[<span style='color: #093b85'>photo: Diana Polekhina @unsplash</span>]  
+
+
+---
+
+
+
+
+---
+class: top left hide-count
+background-image: url(img/christina-victoria-craft-WHSnkIwWpec-unsplash.jpeg)
+background-size: cover
+
+## <span style='color: #226252'>The LBP Era</span>  
+
+
+.footnote-right[<span style='color: white'>photo: Christina Victoria Craft @unsplash</span>]  
+
+
+
+---
+class: middle right hide-count
+background-image: url(img/Gemini_Generated_Image_i7lg9vi7lg9vi7lg_crop.jpg)
+background-size: cover
+
+## <span style='color: white;'>Future Considerations</span>
+
+
+.footnote-left[<span style='color: white'>photo: Google Gemini</span>]  
+
+
+---
+
+## MBT Efficacy Beyond R-CDI & Beyond the Gut  
+
+.pull-left[
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics(path = "img/otto_bacillus_effect.png")
+
+```
+
+]
+
+.pull-right[
+
+- MDRO pathogen burden reduction:   
+
+    - FMT reduces gut reservoir of MDROs by strain replacement  
+
+- MRSA decolonization:
+
+   - oral probiotic _B. subtilis_ MB40 reduces not just enteric but also nasal reservoirs of MRSA  
+
+]
+
+
+.footnote-left[Gopalsamy et al _ICHE_ 2018; Saha et al _CMI_ 2019; Woodworth et al _STM_ 2023; Piewngam et al _Lancet Microbe_ 2023]  
+
+
+---
+
+## Acknowledgements    
+
+.pull-left[
+- __MOTION Lab & C-STAR @ Penn__
+Laura Cowden, Laurel Glaser, Kyle Rodino, Sean Loughrey, 
+Magda Wernovsky, Erik Clarke, Michael David, Matt Ziegler, 
+Lauren Dutcher, Ebbing Lautenbach, Jim Harrigan, Alexa Patel, Dylan Tapper, Anne Jaskowiak, Pam Tolomeo   
+
+- __Bushman Laboratory @ Penn__
+Arwa Abbas, Aoife Roche, Andrew Marques,
+Aubrey Bailey, John Everett,
+Rick Bushman
+
+- __PennCHOP Microbiome Program__
+Lisa Mattei, Huanjia Zhang, Kyle Bittinger
+
+]
+
+
+.pull-right[
+- __Collman Laboratory @ Penn__
+Ize Imai, Aurea Simon Soro, John McGinniss, Ron Collman
+
+- __Division of ID @ Penn__
+Ian Frank, Pablo Tebas, Robert Gross, Emily Blumberg
+
+- __Rutgers University & Penn DBEI__
+Jason Roy, Arman Oganisian
+  
+- __AGA FMT National Registry__
+Gary Wu, Colleen Kelly, Jim Lewis
+  
+- __Funding__
+<u>CDC</u>: BAAs 200-2016-91964, 200-2018-02919, 200-2021-10986 & <u>NIAID</u>: K23 AI121485, U19AI174998
+
+]
+
+.center[
+## brendank@upenn.edu
+]
+
+
+
+---
+class: bottom center hide-count
+background-image: url(img/adrian-lange-Wk902ZLaA7M-unsplash_crop.jpg)
+background-size: cover
+
+.title-text[<span style='font-size:0.5em; color:#ffffff'>Questions?</span>]  
+
+.footnote-right[<span style='color:#ffffff'>photo: Adrian Lange @unsplash</span>]  
+
+
