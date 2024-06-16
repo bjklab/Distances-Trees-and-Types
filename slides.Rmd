@@ -377,15 +377,39 @@ background-image: url(img/pptx_img/image2.png)
 background-size: contain
 
 
+---
+
+## Dimension Reduction: Beta Diversity  
+
+.pad-left[
+
+- Summarize each sample’s relationship to other samples:  
+
+    - pairwise distances  
+
+    - OTU table → square matrix   
+
+- Many beta diversity metrics:  
+
+    - just counts versus counts + phylogeny  
+
+    - weighted versus unweighted  
+    
+    - (Euclidean versus non-Euclidean)
+
+
+]
+
+---
+class: top left
+background-image: url(img/pptx_img/image19.png)
+background-size: contain
+
+
+.footnote-left[Anderson MJ et al. _Austral Ecol_ 2001;26(1):32-46.]
 
 ---
 
-
----
-
-
-
----
 
 
 ---
