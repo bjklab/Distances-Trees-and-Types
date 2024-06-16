@@ -27,6 +27,8 @@ library(tidyverse)
 library(gt)
 library(gtsummary)
 
+set.seed(16)
+
 ```
 
 ```{r xaringan-tile-view, echo=FALSE, message=FALSE, error=FALSE, include=FALSE, comment=FALSE}
@@ -87,7 +89,10 @@ University of Pennsylvania
   
 .pull-left[  
   
-- The problem: too much data.  
+- The problem: **too much** data
+
+    - the "p > n problem"  
+      (columns > rows problem)  
 
 - Reducing dimensions:  
 
@@ -134,7 +139,7 @@ background-size: cover
 
     - “tag” gene with conserved and variable regions (16S, 18S, ITS)  
 
-    - "shotgun" metagenomics (pool of randomly amplified nucleic acid)  
+    - "shotgun" metagenomics (pool of randomly amplified nucleic acids)  
 
 - Sequence binning and assignment:  
 
@@ -142,7 +147,7 @@ background-size: cover
 
      - assemble contiguous metagenomic sequences → taxonomy
 
-     - unassembled/un-binned reads → taxonomic assignment
+     - unassembled/un-binned reads → taxonomic assignment (e.g., ASVs or SGBs) 
 
 ]
 
@@ -152,19 +157,107 @@ background-size: cover
 
 ---
 
+## An Example OTU Table  
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
 
+set.seed(16)
+
 # read counts
-sample(x = seq(0,1000,1), size = 1e5, replace = TRUE, prob = c(0.25, rep(0.75 / 1000, 1000))) |> 
-   matrix(data = _, nrow = 1000, ncol = 100) |> 
+sample(x = seq(0,1000,1), size = 1e4, replace = TRUE, prob = c(0.8, rep(0.2 / 100, 1000))) |> 
+   matrix(data = _, nrow = 1000, ncol = 10) |> 
    as.data.frame(row.names = paste0("OTU_",seq(1000))) |> 
-   as_tibble()
-
-
+   as_tibble(rownames = "OTU ID") |>
+   rename_all(.funs = ~ gsub("V","Specimen_", .x)) |> 
+   gt::gt_preview() |> 
+   gt::as_raw_html()
 
 
 ```
 
+
+
+---
+
+## An Example OTU Table: Samples & Variables?    
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+
+set.seed(16)
+
+# read counts
+sample(x = seq(0,1000,1), size = 1e4, replace = TRUE, prob = c(0.8, rep(0.2 / 100, 1000))) |> 
+   matrix(data = _, nrow = 1000, ncol = 10) |> 
+   as.data.frame(row.names = paste0("OTU_",seq(1000))) |> 
+   as_tibble(rownames = "OTU ID") |>
+   rename_all(.funs = ~ gsub("V","Specimen_", .x)) |> 
+   gt::gt_preview() |> 
+   gt::as_raw_html()
+
+
+```
+
+.pad-left[
+
+- which are the samples and which are the variables?  
+
+- also note: lots of zeros  
+
+]
+
+
+---
+
+## An Example OTU Table: Samples vs Variables    
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
+
+set.seed(16)
+
+# read counts
+sample(x = seq(0,1000,1), size = 1e4, replace = TRUE, prob = c(0.8, rep(0.2 / 100, 1000))) |> 
+   matrix(data = _, nrow = 1000, ncol = 10) |> 
+   t() |> 
+   as.data.frame(row.names = paste0("Specimen_",seq(10))) |> 
+   as_tibble(rownames = "Specimen ID") |>
+   rename_all(.funs = ~ gsub("V","OTU_", .x)) |> 
+   gt::gt_preview() |> 
+   gt::as_raw_html()
+
+
+```
+
+.pad-left[
+
+- OTUs are really *columns* (i.e., variables) & specimens *rows* (i.e., observations)  
+
+- 10 rows & 1000 columns → p >> n   
+
+]
+
+---
+
+## High-Dimensional Microbiome Data  
+
+.pad-left[
+
+- Descriptive:  
+
+    - heatmaps  
+
+    - stacked barplots  
+
+- Test a priori hypotheses regarding specific OTUs/taxa.  
+
+- Reduce dimensions:  
+
+    - single summary statistic (alpha diversity)  
+
+    - pairwise distances (beta diversity) with PCoA or PERMANOVA  
+
+    - community types (mixture modeling)  
+
+]
 
 
 ---
