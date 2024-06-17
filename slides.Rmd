@@ -762,7 +762,7 @@ background-image: url(img/pptx_img/image27.png)
 background-size: contain
 
 
-.footnote-left[Holmes I et al _PLoS One_ 2012]
+.footnote-left[Kelly et al _ASM Microbe_ 2016]
 
 ---
 class: top left
@@ -770,42 +770,101 @@ background-image: url(img/pptx_img/image28.png)
 background-size: contain
 
 
-.footnote-left[Holmes I et al _PLoS One_ 2012]
+.footnote-left[Kelly et al _ASM Microbe_ 2016]
+
+---
+class: top left
+background-image: url(img/pptx_img/image28.png)
+background-size: contain
+
+
+.footnote-left[Kelly et al _ASM Microbe_ 2016]
+
+---
+class: top left
+background-image: url(img/pptx_img/image37.png)
+background-size: contain
+
+
+.footnote-left[Kelly et al _ASM Microbe_ 2016]
+
 
 ---
 
----
-
----
-
-
----
-
-## MBT Efficacy Beyond R-CDI & Beyond the Gut  
-
-.pull-left[
-
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
-knitr::include_graphics(path = "img/otto_bacillus_effect.png")
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image30.png")
 
 ```
 
+
+.footnote-left[Ding & Schloss _Nature_ 2014]
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image33.png")
+
+```
+
+
+.footnote-left[Wu et al _Science_ 2011]
+
+---
+class: middle right hide-count
+background-image: url(img/geranimo-qzgN45hseN0-unsplash.jpg)
+background-size: cover
+
+## <span style='color: white;'>Conclusions</span>
+
+
+.footnote-left[<span style='color: white'>photo: Geranimo @unsplash</span>]  
+
+---
+
+## Methods for Microbiome Data  
+
+.pad-left[
+
+- Visualization: heatmaps and barplots.  
+
+- Single-taxon hypothesis.  
+
+- Alpha diversity: richness and evenness.  
+
+- Pairwise distances: count/phylogeny, weighted/unweighted.  
+
+- Ordination: PCA & PCoA.  
+
+- PERMANOVA: categorical exposure & microbiome outcome (allows quantification of effect size)  
+
+- DMM models: unsupervised clustering > "community types"(identify relationships among variables/OTUs)  
+
 ]
 
-.pull-right[
 
-- MDRO pathogen burden reduction:   
+---
 
-    - FMT reduces gut reservoir of MDROs by strain replacement  
+## Conclusions  
 
-- MRSA decolonization:
+.pad-left[
 
-   - oral probiotic _B. subtilis_ MB40 reduces not just enteric but also nasal reservoirs of MRSA  
+- Distance-based analysis and adonis/PERMANOVA testing:  
+
+    - microbiome outcome measures  
+
+    - omega2 to define effect size of exposure/intervention  
+
+    - power estimation  
+
+- Dirichlet-multinomial mixtures:  
+
+    - categorical analysis may correspond with biologic community types  
+
+    - identify key species  
+
+    - discovery / validation design  
 
 ]
-
-
-.footnote-left[Gopalsamy et al _ICHE_ 2018; Saha et al _CMI_ 2019; Woodworth et al _STM_ 2023; Piewngam et al _Lancet Microbe_ 2023]  
 
 
 ---
