@@ -734,7 +734,7 @@ knitr::include_graphics(path = "img/pptx_img/image34.png")
 ---
 
 .pull-left[
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='70%'}
 knitr::include_graphics(path = "img/pptx_img/image29.png")
 
 ```
