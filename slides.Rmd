@@ -651,7 +651,7 @@ background-size: contain
 
 ## Other Approaches to Modeling Distances  
 
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='70%'}
 knitr::include_graphics(path = "img/pptx_img/image24.png")
 
 ```
@@ -695,7 +695,7 @@ background-size: cover
 ---
 
 .pull-left[
-```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='70%'}
 knitr::include_graphics(path = "img/pptx_img/image36.png")
 
 ```
@@ -791,6 +791,8 @@ background-size: contain
 
 ---
 
+## Reading Selection  
+
 ```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
 knitr::include_graphics(path = "img/pptx_img/image30.png")
 
@@ -800,6 +802,8 @@ knitr::include_graphics(path = "img/pptx_img/image30.png")
 .footnote-left[Ding & Schloss _Nature_ 2014]
 
 ---
+
+## Reference Standard for DMM Approach  
 
 ```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
 knitr::include_graphics(path = "img/pptx_img/image33.png")
@@ -868,6 +872,7 @@ background-size: cover
 
 
 ---
+exclude: true
 
 ## Acknowledgements    
 
