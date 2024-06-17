@@ -774,14 +774,6 @@ background-size: contain
 
 ---
 class: top left
-background-image: url(img/pptx_img/image28.png)
-background-size: contain
-
-
-.footnote-left[Kelly et al _ASM Microbe_ 2016]
-
----
-class: top left
 background-image: url(img/pptx_img/image37.png)
 background-size: contain
 
