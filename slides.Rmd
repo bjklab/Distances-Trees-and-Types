@@ -590,15 +590,54 @@ knitr::include_graphics(path = "img/pptx_img/image17.png")
 ```
 
 
+---
+class: top left
+background-image: url(img/pptx_img/image13.png)
+background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image12.png)
+background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image14.png)
+background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image15.png)
+background-size: contain
 
 
 ---
 
+.pull-left[
+
+$$R^{2} = 1 - \frac{SS_{W}}{SS_{W} + SS_{A}} = \frac{SS_{A}}{SS_{T}}$$
+
+]
+
+.pull-right[
+
+$$\omega^{2} = \frac{SS_{A} - (a - 1) \cdot \frac{SS_{W}}{N - a}}{SS_{T} + \frac{SS_{W}}{N - a}}$$
+
+]
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image21.png")
+
+```
+
+
+.footnote-right[Kelly BJ et al. Bioinformatics 2015;31(15):2461-8]
 
 ---
 
-
----
 
 
 ---
