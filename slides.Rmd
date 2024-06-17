@@ -648,15 +648,13 @@ background-size: contain
 
 
 ---
-class: top left hide-count
-background-image: url(img/christina-victoria-craft-WHSnkIwWpec-unsplash.jpeg)
-background-size: cover
 
-## <span style='color: #226252'>The LBP Era</span>  
+## Other Approaches to Modeling Distances  
 
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image24.png")
 
-.footnote-right[<span style='color: white'>photo: Christina Victoria Craft @unsplash</span>]  
-
+```
 
 
 ---
@@ -664,10 +662,121 @@ class: middle right hide-count
 background-image: url(img/Gemini_Generated_Image_i7lg9vi7lg9vi7lg_crop.jpg)
 background-size: cover
 
-## <span style='color: white;'>Future Considerations</span>
+## <span style='color: white;'>Cluster Analysis</span>
 
 
 .footnote-left[<span style='color: white'>photo: Google Gemini</span>]  
+
+---
+
+## Statistical / Machine Learning  
+
+.pad-left[
+
+- Supervised learning:  
+
+    - exposure and outcome  
+
+    - regression, linear discriminant analysis, KNN clustering  
+
+    - test & training data; cross-validation  
+
+- Unsupervised learning:  
+
+- understand relationships between observations or variables  
+
+- can we reduce the dimensions of microbiome data?  
+
+
+]
+
+.footnote-left[Holmes I et al _PLoS One_ 2012]
+
+---
+
+.pull-left[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image36.png")
+
+```
+]
+
+.pull-right[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image34.png")
+
+```
+]
+
+---
+
+## Dimension Reduction: Mixture Models  
+
+.pad-left[
+
+- Dirichlet-multinomial distribution:  
+
+    - compound probability distribution: probability vector drawn from Dirichlet distribution (generalized beta) → observation drawn from multinomial distribution (generalized binomial)  
+
+- D-M mixture modelling:  
+
+    - each sample ~ multinomial from one Dirichlet vector  
+
+    - number of Dirichlet vectors: minimize -log(model evidence, Laplace approx)  
+
+    - Dirichlet probability vectors = “community types”  
+
+]
+
+.footnote-left[Holmes I et al _PLoS One_ 2012]
+
+
+---
+
+.pull-left[
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image29.png")
+
+```
+]
+
+.pull-right[
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='10%'}
+knitr::include_graphics(path = "img/pptx_img/image23.png")
+
+```
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='80%'}
+knitr::include_graphics(path = "img/pptx_img/image25.png")
+
+```
+]
+
+.footnote-left[Holmes I et al _PLoS One_ 2012]
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image27.png)
+background-size: contain
+
+
+.footnote-left[Holmes I et al _PLoS One_ 2012]
+
+---
+class: top left
+background-image: url(img/pptx_img/image28.png)
+background-size: contain
+
+
+.footnote-left[Holmes I et al _PLoS One_ 2012]
+
+---
+
+---
+
+---
 
 
 ---
