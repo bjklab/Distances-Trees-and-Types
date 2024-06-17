@@ -312,7 +312,7 @@ background-size: contain
 
 ---
 
-## Single-Taxon hypotheses
+## Single-Taxon Hypotheses
 
 .pad-left[
 
@@ -334,6 +334,8 @@ background-size: contain
 ]
 
 ---
+
+## Single-Taxon Hypotheses
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='100%'}
 
@@ -471,11 +473,13 @@ knitr::include_graphics(path = "img/pptx_img/image31.png")
 
 ---
 
-## Original Descriptors: PCA  
+## Dimension Reduction: PCA  
 
 .pad-left[
 
 - PCA: principal component analysis  
+
+    - uses original descriptors (e.g., OTU abundance)  
 
     - rigid rotation for successive directions of maximum variance  
 
@@ -494,11 +498,13 @@ background-size: contain
 
 ---
 
-## Pairwise Distances: PCoA  
+## Dimension Reduction: PCoA  
 
 .pad-left[
 
 - PCoA: principal coordinate analysis  
+
+    - uses pairwise distances  
 
     - any metric distance, even if non-Euclidean  
 
@@ -538,6 +544,55 @@ background-size: contain
 class: top left
 background-image: url(img/pptx_img/image35.png)
 background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image10.png)
+background-size: contain
+
+
+---
+
+## Dimension Reduction: PERMANOVA (adonis)  
+
+.pad-left[
+
+- Pairwise distance matrix can be partitioned by group assignment and ANOVA-like analysis can be applied to detect difference between groups.  
+
+- PERMANOVA: permutational ANOVA (aka, adonis)  
+
+    - pseudo F-ratio: conceptually similar but not F-distributed  
+
+    - testing by label permutation  
+
+    - quantification of effect size by R-squared or omega-squared (the latter a less biased estimator of true effect)  
+
+
+]
+
+---
+class: top left
+background-image: url(img/pptx_img/image19.png)
+background-size: contain
+
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='90%'}
+knitr::include_graphics(path = "img/pptx_img/image16.png")
+
+```
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='40%'}
+knitr::include_graphics(path = "img/pptx_img/image17.png")
+
+```
+
+
+
+
+---
 
 
 ---
