@@ -410,6 +410,26 @@ background-size: contain
 
 ---
 
+## Dimension Reduction: Beta Diversity  
+
+.pad-left[
+
+- Just counts versus counts + phylogeny:  
+
+    - Jaccard: $J(A,B) = \frac{A \cap B}{A \cup B} = \frac{A \cap B}{A \cup B}$   
+
+    - Jaccard distance: 
+
+    - UniFrac: fraction of unique branch length in tree  
+
+- Weighted versus unweighted:  
+
+    - weighted: counts matter  
+
+    - unweighted: binary (presence-absence)  
+
+
+]
 
 
 ---
