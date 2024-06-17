@@ -683,9 +683,9 @@ background-size: cover
 
 - Unsupervised learning:  
 
-- understand relationships between observations or variables  
+    - understand relationships between observations or variables  
 
-- can we reduce the dimensions of microbiome data?  
+    - can we reduce the dimensions of microbiome data?  
 
 
 ]
