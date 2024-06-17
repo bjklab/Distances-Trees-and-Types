@@ -416,9 +416,9 @@ background-size: contain
 
 - Just counts versus counts + phylogeny:  
 
-    - Jaccard: $J(A,B) = \frac{A \cap B}{A \cup B} = \frac{A \cap B}{A \cup B}$   
+    - Jaccard: $J(A,B) = \frac{|A \cap B|}{|A \cup B|} = \frac{|A \cap B|}{|A| + |B| - |A \cap B|}$   
 
-    - Jaccard distance: 
+    - Jaccard distance: $d_{J}(A,B) = 1 - \frac{|A \cap B|}{|A \cup B|} = \frac{|A \cup B| - |A \cap B|}{|A \cup B|}$
 
     - UniFrac: fraction of unique branch length in tree  
 
@@ -430,6 +430,120 @@ background-size: contain
 
 
 ]
+
+---
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='50%'}
+knitr::include_graphics(path = "img/pptx_img/image5.png")
+
+```
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='70%'}
+knitr::include_graphics(path = "img/pptx_img/image7.png")
+
+```
+
+
+---
+
+## Beta Diversity: How to Choose?  
+
+.pad-left[
+
+- Why use Jaccard? UniFrac?  
+
+- Why use weighted distances? Unweighted distances?  
+
+
+]
+
+
+---
+
+## Thinking Like a Tree  
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE, fig.align='center', out.width='48%'}
+knitr::include_graphics(path = "img/pptx_img/image31.png")
+
+```
+
+.footnote-right[Johnson AJ et al. _Cell Host Microbe_ 2019]
+
+---
+
+## Original Descriptors: PCA  
+
+.pad-left[
+
+- PCA: principal component analysis  
+
+    - rigid rotation for successive directions of maximum variance  
+
+    - lots of restrictions (Euclidean)  
+
+    - but allows projection of original descriptors in PCA space
+
+]
+
+---
+class: top left
+background-image: url(img/ijerph-19-10107-g003.jpg)
+background-size: contain
+
+.footnote-left[Perrone MR et al _Int J Environ Res Public Health_ 2022]
+
+---
+
+## Pairwise Distances: PCoA  
+
+.pad-left[
+
+- PCoA: principal coordinate analysis  
+
+    - any metric distance, even if non-Euclidean  
+
+    - like PCA, eigenvalue decomposition (maximum variance) but mediated by distance function (no original descriptors)  
+
+    - unlike PCA, does not allow projection of original descriptors in reduced-dimension space  
+
+]
+
+---
+class: top left
+background-image: url(img/pptx_img/image9.png)
+background-size: contain
+
+.footnote-left[Legendre & Legendre _Numerical Ecology_ 3rd edition]
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image18.png)
+background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image26.png)
+background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image8.png)
+background-size: contain
+
+
+---
+class: top left
+background-image: url(img/pptx_img/image35.png)
+background-size: contain
+
+
+---
+
+
+---
 
 
 ---
