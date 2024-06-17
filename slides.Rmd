@@ -469,7 +469,7 @@ knitr::include_graphics(path = "img/pptx_img/image31.png")
 
 ```
 
-.footnote-right[Johnson AJ et al. _Cell Host Microbe_ 2019]
+.footnote-left[Johnson AJ et al. _Cell Host Microbe_ 2019]
 
 ---
 
@@ -616,6 +616,8 @@ background-size: contain
 
 ---
 
+## PERMANOVA: Effect Sizes  
+
 .pull-left[
 
 $$R^{2} = 1 - \frac{SS_{W}}{SS_{W} + SS_{A}} = \frac{SS_{A}}{SS_{T}}$$
@@ -634,10 +636,15 @@ knitr::include_graphics(path = "img/pptx_img/image21.png")
 ```
 
 
-.footnote-right[Kelly BJ et al. Bioinformatics 2015;31(15):2461-8]
+.footnote-left[Kelly BJ et al. Bioinformatics 2015;31(15):2461-8]
 
 ---
+class: top left
+background-image: url(img/pptx_img/image32.png)
+background-size: contain
 
+
+.footnote-left[Kelly BJ et al. Bioinformatics 2015;31(15):2461-8]
 
 
 ---
